@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
+    // Alternar menu mobile
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
 
     if (mobileBtn) {
         mobileBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            // Change icon
+            // Alterar ícone
             const icon = mobileBtn.querySelector('i');
             if (navLinks.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close menu when clicking a link
+    // Fechar menu ao clicar em um link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             if (navLinks.classList.contains('active')) {
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Smooth Scrolling for Anchor Links (Native usually works, but this ensures offset for fixed header)
+    // Rolagem suave para links âncora (o nativo geralmente funciona, mas isso garante o deslocamento do header fixo)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Navbar scroll effect
+    // Efeito da navbar ao rolar a página
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -63,12 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Dark Mode Toggle
+    // Alternar modo escuro
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
     const icon = themeToggle.querySelector('i');
 
-    // Check Local Storage
+    // Verificar Local Storage
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/* Carousel Logic */
+/* Lógica do Carrossel */
 document.addEventListener('DOMContentLoaded', function () {
     const carousels = document.querySelectorAll('.carousel-container');
 
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-/* Modal Logic */
+/* Lógica do Modal */
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('collection-modal');
     const closeBtn = document.querySelector('.close-modal');
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalBody = document.getElementById('modal-body');
     const openBtns = document.querySelectorAll('.js-open-modal');
 
-    // Data Content
+    // Conteúdo de dados
     const collections = {
         fit: {
             title: 'Coleção FIT',
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Open Modal
+    // Abrir modal
     openBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -161,31 +161,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalTitle.textContent = collections[category].title;
                 modalBody.innerHTML = collections[category].content;
 
-                // Reset Theme Classes
+                // Resetar classes de tema
                 const modalContent = modal.querySelector('.modal-content');
                 modalContent.classList.remove('theme-fit', 'theme-lux', 'theme-spa', 'theme-vip');
 
-                // Add new Theme Class
+                // Adicionar nova classe de tema
                 modalContent.classList.add(`theme-${category}`);
 
                 modal.classList.add('show');
-                modal.style.display = 'flex'; // Ensure flex display for centering
-                // Optional: disable body scroll
+                modal.style.display = 'flex'; // Garante display flex para centralização
+                // Opcional: desativar rolagem do body
                 document.body.style.overflow = 'hidden';
             }
         });
     });
 
-    // Close Modal Function
+    // Função para fechar modal
     const closeModal = () => {
         modal.classList.remove('show');
         setTimeout(() => {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
-        }, 300); // Wait for transition
+        }, 300); // Aguarda a transição
     };
 
-    // Close Events
+    // Eventos de fechamento
     if (closeBtn) {
         closeBtn.addEventListener('click', closeModal);
     }
@@ -199,34 +199,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-/* Quiz / Filter Logic */
+/* Lógica do Quiz / Filtro */
 document.addEventListener('DOMContentLoaded', () => {
     const quizBtns = document.querySelectorAll('.quiz-btn');
 
     quizBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const targetName = btn.getAttribute('data-target');
-            // Construct selector for the specific line card/row
-            // e.g. .line-spa-card
+            // Construir seletor para a linha específica
+            // Ex: .line-spa-card
             const targetSelector = `.line-${targetName}-card`;
             const targetElement = document.querySelector(targetSelector);
 
             if (targetElement) {
-                // Scroll to the element
+                // Rolar até o elemento
                 targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-                // Find the image and trigger animation
+                // Encontrar a imagem e disparar animação
                 const img = targetElement.querySelector('img');
                 if (img) {
-                    // Remove class first to reset if already clicked recently
+                    // Remove a classe primeiro para reiniciar a animação se já tiver sido clicado
                     img.classList.remove('highlight-line');
 
-                    // Force reflow to ensuring restart of animation
+                    // Força reflow para garantir o reinício da animação
                     void img.offsetWidth;
 
                     img.classList.add('highlight-line');
 
-                    // Clean up class after animation (1s)
+                    // Remove a classe após a animação (1s)
                     setTimeout(() => {
                         img.classList.remove('highlight-line');
                     }, 1000);
