@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Touti - Livramento de Nss. Senhora</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <meta name="description"
+        content="VIP Touti - Sua fragrância favorita com o melhor custo-benefício. Fixação de 12h, inspirado em Paris.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header / Nav -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <h1 class="logo">VIP TOUTI</h1>
+            <ul class="nav-links">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#diferenciais">Diferenciais</a></li>
+                <li><a href="#linhas">Linhas</a></li>
+                <li><a href="#licenciados">Licenciados</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h2>Sua fragrância favorita com o melhor custo-benefício.</h2>
+            <p>Inspirado na alta perfumaria internacional. Fixação premium de até 12 horas.</p>
+            <a href="#linhas" class="btn btn-primary">Conheça Nossas Linhas</a>
+        </div>
+    </header>
+
+    <!-- Diferenciais -->
+    <section id="diferenciais" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Por que escolher VIP Touti?</h2>
+            <div class="diferenciais-grid">
+                <div class="diferencial-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Alta Fixação</h3>
+                    <p>Até 12 horas de duração na pele.</p>
+                </div>
+                <div class="diferencial-card">
+                    <i class="fas fa-globe-europe"></i>
+                    <h3>Fragrâncias Importadas</h3>
+                    <p>Essências premium inspiradas em Paris.</p>
+                </div>
+                <div class="diferencial-card">
+                    <i class="fas fa-tags"></i>
+                    <h3>Preço Acessível</h3>
+                    <p>Luxo que cabe no seu bolso.</p>
+                </div>
+                <div class="diferencial-card">
+                    <i class="fas fa-paw"></i>
+                    <h3>Vegano e Cruelty-Free</h3>
+                    <p>Não testamos em animais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz / Descubra sua Fragrância -->
+    <section id="quiz-section" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Descubra sua Fragrância</h2>
+            <div class="quiz-container">
+                <button class="quiz-btn" data-target="spa">
+                    <i class="fas fa-sun"></i> Para Relaxar
+                </button>
+                <button class="quiz-btn" data-target="lux">
+                    <i class="fas fa-moon"></i> Para a Noite
+                </button>
+                <button class="quiz-btn" data-target="fit">
+                    <i class="fas fa-bolt"></i> Esporte & Frescor
+                </button>
+                <button class="quiz-btn" data-target="vip">
+                    <i class="fas fa-gem"></i> Ocasião Especial
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Linhas -->
+    <section id="linhas" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Nossas Linhas</h2>
+            <div class="lines-container">
+                <!-- Linha FIT -->
+                <div class="line-row line-fit-card">
+                    <div class="line-image-container">
+                        <img src="assets/fit.jpg" alt="Linha VIP Touti FIT">
+                    </div>
+                    <div class="line-content">
+                        <h3>Linha FIT</h3>
+                        <p>Energia, movimento e frescor. Perfeito para o dia a dia, trazendo uma sensação de vitalidade
+                            única.</p>
+                        <a href="#" class="btn btn-outline js-open-modal" data-category="fit">Ver Coleção</a>
+                    </div>
+                </div>
+
+                <!-- Linha LUX -->
+                <div class="line-row line-lux-card">
+                    <div class="line-image-container">
+                        <img src="assets/lux.png" alt="Linha VIP Touti LUX">
+                    </div>
+                    <div class="line-content">
+                        <h3>Linha LUX</h3>
+                        <p>Poder, sedução e intensidade. Para momentos marcantes onde você deseja ser inesquecível.</p>
+                        <a href="#" class="btn btn-outline js-open-modal" data-category="lux">Ver Coleção</a>
+                    </div>
+                </div>
+
+                <!-- Linha SPA -->
+                <div class="line-row line-spa-card">
+                    <div class="line-image-container">
+                        <img src="assets/spa.png" alt="Linha VIP Touti SPA">
+                    </div>
+                    <div class="line-content">
+                        <h3>Linha SPA</h3>
+                        <p>Bem-estar, leveza e conexão com a natureza. Relaxe e renove suas energias.</p>
+                        <a href="#" class="btn btn-outline js-open-modal" data-category="spa">Ver Coleção</a>
+                    </div>
+                </div>
+
+                <!-- Linha VIP -->
+                <div class="line-row line-vip-card">
+                    <div class="line-image-container">
+                        <img src="assets/vip.jpg" alt="Linha VIP Touti VIP">
+                    </div>
+                    <div class="line-content">
+                        <h3>Linha VIP</h3>
+                        <p>Exclusividade, brilho e sofisticação pura. A assinatura de quem sabe o que quer.</p>
+                        <a href="#" class="btn btn-outline js-open-modal" data-category="vip">Ver Coleção</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Linhas Especiais (Carousel) -->
+    <section id="linhas-especiais" class="section-padding licensed-section">
+        <div class="container">
+            <h2 class="section-title">Linhas Especiais</h2>
+
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+
+                <div class="carousel-track-container">
+                    <div class="licensed-grid carousel-track">
+                        <!-- Bliss -->
+                        <div class="licensed-card">
+                            <img src="assets/bliss.png" alt="Bliss">
+                            <div class="licensed-info">
+                                <h3>Bliss</h3>
+                                <p>Uma fragrância iluminada e radiante, ideal para quem busca leveza e sofisticação no
+                                    dia a dia.</p>
+
+                            </div>
+                        </div>
+                        <!-- My Soul -->
+                        <div class="licensed-card">
+                            <img src="assets/mysoul.jpeg" My Soul">
+                            <div class="licensed-info">
+                                <h3>My Soul</h3>
+                                <p>A essência da sua identidade. Um perfume profundo e envolvente que marca a alma.</p>
+
+                            </div>
+                        </div>
+                        <!-- Velvet Seduction -->
+                        <div class="licensed-card">
+                            <img src="assets/velvetSeduction.png" alt="Velvet Seduction">
+                            <div class="licensed-info">
+                                <h3>Velvet Seduction</h3>
+                                <p>O toque aveludado da sedução. Uma fragrância intensa, luxuosa e magnética para noites
+                                    inesquecíveis.</p>
+
+                            </div>
+                        </div>
+                        <!-- Charm -->
+                        <div class="licensed-card">
+                            <img src="assets/charm.jpeg" alt="Cham">
+                            <div class="licensed-info">
+                                <h3>Charm</h3>
+                                <p>Charme e personalidade em cada nota. O equilíbrio perfeito entre o moderno e o
+                                    clássico.</p>
+
+                            </div>
+                        </div>
+
+                         <!-- Desire -->
+                        <div class="licensed-card">
+                            <img src="assets/Desire.jpg" alt="Desire">
+                            <div class="licensed-info">
+                                <h3>Desire</h3>
+                                <p>Uma fragrância magnética e envolvente, feita para quem deseja deixar um rastro de sedução e sofisticação por onde passa.
+                            </div>
+                        </div>
+
+                         <!-- Unity -->
+                        <div class="licensed-card">
+                            <img src="assets/unity.jpg" alt="Unity">
+                            <div class="licensed-info">
+                                <h3>Unity</h3>
+                                <p>A harmonia perfeita entre frescor e força. Uma essência versátil que celebra a união de notas vibrantes para o dia a dia.</p>
+
+                            </div>
+                        </div>
+
+                         <!-- Prestige -->
+                        <div class="licensed-card">
+                            <img src="assets/prestige.jpg" alt="Prestige">
+                            <div class="licensed-info">
+                                <h3>Prestige</h3>
+                                <p>O ápice da elegância e do poder. Notas intensas e refinadas para momentos onde a presença marcante é indispensável.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next-btn" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#contato" class="btn btn-primary"
+                    style="background-color: var(--color-licensed); color: #000;">Conhecer Toda a Linha</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfumes Licenciados (Carousel) -->
+    <section id="licenciados" class="section-padding licensed-section">
+        <div class="container">
+            <h2 class="section-title">Colaborações & Licenciados</h2>
+
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+
+                <div class="carousel-track-container">
+                    <div class="licensed-grid carousel-track">
+                        <!-- Card 1 -->
+                        <div class="licensed-card">
+                            <img src="assets/paris.jpeg" alt="Licenciado Exclusivo 1">
+                            <div class="licensed-info">
+                                <h3>Paris Sain't Germain</h3>
+                                <p>A elegância e a vibração da elite de Paris. Uma fragrância moderna e sofisticada.</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="licensed-card">
+                            <img src="assets/barcelona.jpeg" alt="Licenciado Exclusivo 2">
+                            <div class="licensed-info">
+                                <h3>Blaugrana</h3>
+                                <p>A força e o espírito de um campeão. Notas vibrantes para quem busca dinamismo.</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="licensed-card">
+                            <img src="assets/nfl.jpg" alt="Licenciado Exclusivo 3">
+                            <div class="licensed-info">
+                                <h3>NFL</h3>
+                                <p>Potência, estratégia e tradição. Uma fragrância intensa para quem vive com energia.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="licensed-card">
+                            <img src="assets/city.png" alt="Licenciado Exclusivo 4">
+                            <div class="licensed-info">
+                                <h3>Manchester City</h3>
+                                <p>Inovação e domínio. Um aroma marcante que reflete a modernidade do futebol inglês.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="licensed-card">
+                            <img src="assets/juventus.jpg" alt="Licenciado Exclusivo 5">
+                            <div class="licensed-info">
+                                <h3>Juventus</h3>
+                                <p>O clássico estilo italiano. Elegância atemporal e sofisticação em cada nota.</p>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="licensed-card">
+                            <img src="assets/marinaFerrari.jpg" alt="Licenciado Exclusivo 7">
+                            <div class="licensed-info">
+                                <h3>Marina Ferrari</h3>
+                                <p>Leveza, frescor e autenticidade. Perfeito para mulheres dinâmicas e inspiradoras.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next-btn" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#contato" class="btn btn-primary"
+                    style="background-color: var(--color-licensed); color: #000;">Conhecer Toda a Linha</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Autoridade e Dicas -->
+    <section id="fixacao-tips" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header-centered">
+                <h2 class="section-title">O Segredo da Fixação 24h</h2>
+                <p class="section-subtitle">Transforme sua aplicação em um ritual de sofisticação</p>
+            </div>
+
+            <div class="tips-grid">
+                <!-- Esquerda: Infográfico de Pontos de Pulso -->
+                <div class="pulse-points-column">
+                    <div class="infographic-container">
+                        <div class="pulse-point-item">
+                            <i class="fas fa-gem"></i>
+                            <div class="pulse-text">
+                                <h4>Pulsos</h4>
+                                <p>Calor constante para difusão contínua.</p>
+                            </div>
+                        </div>
+                        <div class="pulse-point-item">
+                            <i class="fas fa-gem"></i>
+                            <div class="pulse-text">
+                                <h4>Atrás das Orelhas</h4>
+                                <p>Projeção ideal ao cumprimentar.</p>
+                            </div>
+                        </div>
+                        <div class="pulse-point-item">
+                            <i class="fas fa-gem"></i>
+                            <div class="pulse-text">
+                                <h4>Dobras dos Braços</h4>
+                                <p>Mantém a essência protegida e duradoura.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infographic-legend">
+                        <p><i class="fas fa-info-circle"></i> "Áreas de maior circulação sanguínea potencializam a
+                            projeção da essência."</p>
+                    </div>
+                </div>
+
+                <!-- Direita: Dicas VIP -->
+                <div class="vip-tips-column">
+                    <div class="vip-tip-card">
+                        <span class="tip-number">01</span>
+                        <div class="tip-content">
+                            <h4>Pele Hidratada</h4>
+                            <p>Aplique um hidratante neutro antes do perfume para 'segurar' a fragrância por mais tempo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="vip-tip-card">
+                        <span class="tip-number">02</span>
+                        <div class="tip-content">
+                            <h4>Não esfregue</h4>
+                            <p>Deixe o perfume secar naturalmente para não quebrar as moléculas olfativas.</p>
+                        </div>
+                    </div>
+                    <div class="vip-tip-card">
+                        <span class="tip-number">03</span>
+                        <div class="tip-content">
+                            <h4>Distância Ideal</h4>
+                            <p>Borrife a 15cm da pele para uma névoa uniforme.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sobre -->
+    <section id="sobre" class="section-padding">
+        <div class="container about-container">
+            <div class="about-text">
+                <h2 class="section-title align-left">Sobre a VIP Touti</h2>
+                <p>Nascida do sonho de democratizar o luxo, a VIP Touti traz para você o melhor da perfumaria mundial.
+                    Nossas essências são desenvolvidas com rigorosos padrões de qualidade, garantindo uma experiência
+                    olfativa única.</p>
+                <p>Inspirados na elegância de Paris, nossos perfumes são feitos para quem não abre mão da sofisticação,
+                    mas valoriza o custo-benefício. Seja para o dia a dia ou para ocasiões especiais, temos a fragrância
+                    perfeita para marcar sua presença.</p>
+            </div>
+            <div class="about-image">
+                <!-- Using hero image again or could be another generated one, reusing hero for now or generic pattern -->
+                <!-- Let's use a nice quote box or style here instead of image to save assets, or re-use hero cropped -->
+                <div class="quote-box">
+                    <p>"O perfume é a forma mais intensa da memória."</p>
+                    <span>- Jean Paul Gaultier</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização e Contato -->
+    <section id="contato" class="section-padding bg-dark">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2 class="section-title text-white align-left">Venha nos visitar</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Mercado Real(Ao lado da Americanas), Entrada - Quiosque. </p>
+                <p><i class="fas fa-clock"></i> Seg a Sex: 7h às 18h | Sáb 7h às 14h. </p>
+                <p>Venha experimentar nossas fragrâncias pessoalmente e encontre sua assinatura olfativa.</p>
+                <a href="https://wa.me/5577998505949" target="_blank" class="btn btn-whatsapp main-cta">
+                    <i class="fab fa-whatsapp"></i> Fale Conosco no WhatsApp
+                </a>
+            </div>
+            <div class="map-placeholder">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.1519222669194!2d-41.843242200000006!3d-13.648520999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7447f0872741a97%3A0x317f0d196042a876!2sAmericanas%20Express!5e0!3m2!1spt-BR!2sbr!4v1766502628533!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 VIP Touti-Livramento BA. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/viptoutilivpiata?igsh=MTBzZ2NlbDJpdzJhMQ=="><i
+                        class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5577998505949" class="floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="https://wa.me/5577998505949" class="floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Modal for Collections -->
+    <div id="collection-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modal-title">Título da Coleção</h3>
+            <div id="modal-body">
+                <!-- Content will be injected via JS -->
+            </div>
+            <a href="https://wa.me/5577998505949" target="_blank" class="btn btn-primary modal-cta">Consultar
+                disponibilidade via WhatsApp</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
